@@ -27,7 +27,10 @@ gulp.task('watch', function() {
 gulp.task('sass', function () {
   return gulp.src('./assets/sass/**/*.scss')
     .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
-    .pipe(gulp.dest('./assets/css'));
+    .pipe(gulp.dest('./assets/css'))
+    .pipe(browserSync.reload({ // Reloading with Browser Sync
+      stream: true
+    }));
 })
 
 // Dev mode
