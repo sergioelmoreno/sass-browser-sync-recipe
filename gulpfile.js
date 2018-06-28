@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var runSequence = require('run-sequence');
-var del = require('del');
 
 // Development Tasks
 // -----------------
